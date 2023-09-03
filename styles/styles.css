@@ -1,0 +1,236 @@
+/* colors */
+* {
+  font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* general styles */
+h1,
+p,
+h4 {
+  color: #F4F5F8;
+}
+
+.title-container {
+  max-width: 610px;
+  margin: auto;
+}
+
+h1.main-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #F4F5F8;
+}
+
+a:hover,
+a:active {
+  color: #5E6AD2;
+}
+
+p.tiny-subtitle {
+  font-size: 0.7rem;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.blue-subtitle {
+  color: #5E6AD2;
+  font-size: 0.8rem;
+}
+
+.boxes {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+@media screen and (max-width: 768px) {
+  .boxes {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.boxes.two-rows {
+  grid-template-rows: repeat(2, 1fr);
+}
+.boxes article {
+  background-color: #282a2f;
+  padding: 1rem;
+}
+.boxes img,
+.boxes p {
+  margin-bottom: 0.6rem;
+}
+.boxes p {
+  font-size: 0.8rem;
+}
+.boxes p.boxes-title {
+  font-weight: 600;
+}
+
+header {
+  background-color: #222326;
+  border-bottom: 2px solid #282a2f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+header nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 0.8rem;
+  margin: 0;
+}
+header nav ul a {
+  color: #F4F5F8;
+  text-decoration: none;
+}
+header #logo {
+  width: 80px;
+}
+
+main section {
+  background-color: #222326;
+  padding: 4rem 20% 4rem;
+}
+@media screen and (max-width: 768px) {
+  main section {
+    padding: 4rem 5% 4rem;
+  }
+}
+main section#first-section {
+  padding-top: 8rem;
+  background: linear-gradient(180deg, #222326 0%, #282a2f 100%);
+}
+@media (max-width: 768px) {
+  main section#first-section form#email-form {
+    font-size: 13px;
+  }
+}
+main section#first-section form#email-form .input-form {
+  background-color: #282a2f;
+  width: 440px;
+  margin: auto;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  main section#first-section form#email-form .input-form {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+main section#first-section form#email-form .input-form input {
+  background-color: transparent;
+  border-color: #222326;
+  padding: 0.5rem;
+  font-size: 1em;
+  color: #F4F5F8;
+  border: none;
+  outline: none;
+}
+main section#first-section form#email-form .input-form input:focus-visible {
+  border: none;
+  outline: none;
+}
+main section#first-section form#email-form button {
+  background-color: #5E6AD2;
+  color: #F4F5F8;
+  font-size: 1em;
+  padding: 0.8rem 1rem;
+  margin-left: 1rem;
+  border: none;
+  border-radius: 4px;
+}
+main section#first-section .show-dashboard-container {
+  margin-top: 3rem;
+}
+main section#first-section .show-dashboard-container img {
+  width: 100%;
+}
+main section#third-section {
+  background-color: #282a2f;
+}
+main section#third-section .command-line-figure {
+  max-width: 100%;
+}
+main section#third-section .command-line-figure img {
+  border-radius: 10px;
+  width: 100%;
+}
+main section#fourth-section {
+  background-color: #1a1921;
+}
+main section#fourth-section .boxes {
+  grid-template-rows: repeat(1, 1fr);
+}
+main section#fourth-section small {
+  font-size: 0.7rem;
+  font-weight: 300;
+  color: #F4F5F8;
+  display: block;
+  margin-top: 1rem;
+}
+main section#fifth-section .links {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 2px solid #282a2f;
+  padding-bottom: 3rem;
+}
+main section#fifth-section .links a {
+  color: #5E6AD2;
+}
+main section#fifth-section .boxes {
+  margin-top: 3rem;
+}
+main section#fifth-section .boxes article {
+  background-color: transparent;
+}
+main section#fifth-section .boxes article img.team-pic {
+  max-width: 50px;
+  filter: grayscale(100%);
+}
+main section#fifth-section .linear-access-figure {
+  max-width: 100%;
+  margin: 3rem 0;
+}
+main section#fifth-section .linear-access-figure img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #222326;
+  border-top: 2px solid #282a2f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+}
+footer p {
+  font-size: 0.7rem;
+  margin: 0;
+}
+footer ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-size: 0.8rem;
+  margin: 0;
+}
+footer ul ul a {
+  color: #F4F5F8;
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,251 @@
+
+    /* colors */
+    $blue: #5E6AD2;
+    $white: #F4F5F8;
+    $gray: #222326;
+    $gray2:#1a1921;
+    $light-gray: #282a2f;
+    $background: rgb(79, 82, 180);
+    
+    *{
+        font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+
+
+
+/* general styles */
+h1,
+p,
+h4 {
+    color: $white;
+}
+
+.title-container {
+    max-width: 610px;
+    margin: auto;
+}
+
+h1.main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+a:hover,
+a:active {
+    color: $blue;
+}
+
+p.tiny-subtitle {
+    font-size: .7rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.blue-subtitle {
+    color: $blue;
+    font-size: .8rem;
+}
+
+.boxes {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    @media screen and (max-width: 768px) {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &.two-rows{
+        grid-template-rows: repeat(2, 1fr);
+
+    }
+    article {
+        background-color: $light-gray;
+        padding: 1rem;
+    }
+
+    img,
+    p {
+        margin-bottom: .6rem;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+
+    p.boxes-title {
+        font-weight: 600;
+    }
+}
+
+
+header {
+    background-color: $gray;
+    border-bottom: 2px solid $light-gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    nav ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        font-size: .8rem;
+        margin: 0;
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+    #logo {
+        width: 80px;
+    }
+}
+
+main {
+    section {
+        background-color: $gray;
+        padding: 4rem 20% 4rem;
+        @media screen and (max-width: 768px) {
+            padding: 4rem 5% 4rem;
+        }
+        &#first-section {
+            padding-top: 8rem;
+            background: linear-gradient(180deg, $gray 0%, $light-gray 100%);
+            form#email-form {
+                @media (max-width: 768px) {
+                    font-size: 13px;
+                }
+                .input-form {
+                    background-color: $light-gray;
+                    width: 440px;
+                    margin: auto;
+                    padding: 5px;
+                    display: flex;
+                    justify-content: space-between;
+                    border-radius: 4px;
+                    @media(max-width: 768px) {
+                        width: 100%;
+                        max-width: 400px;
+                    }
+                    input {
+                        background-color: transparent;
+                        border-color: $gray;
+                        padding: .5rem;
+                        font-size: 1em;
+                        color: $white;
+                        border: none;
+                        outline: none;
+                        &:focus-visible {
+                            border: none;
+                            outline: none;
+                        }
+                    }
+                }
+                button {
+                    background-color: $blue;
+                    color: $white;
+                    font-size: 1em;
+                    padding: .8rem 1rem;
+                    margin-left: 1rem;
+                    border: none;
+                    border-radius: 4px;
+                }
+            }
+            .show-dashboard-container {
+                margin-top: 3rem;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        // &#second-section {
+
+        // }
+        &#third-section {
+            background-color: $light-gray;
+            .command-line-figure {
+                max-width: 100%;
+                img {
+                    border-radius: 10px;
+                    width: 100%;
+                }
+            }
+        }
+        &#fourth-section {
+            background-color: $gray2;
+            .boxes{
+                grid-template-rows: repeat(1, 1fr);
+            }
+            small{
+                font-size: .7rem;
+                font-weight: 300;
+                color: $white;
+                display: block;
+                margin-top: 1rem;
+            }
+        }
+        &#fifth-section {
+            .links{
+                display: flex;
+                gap: 1rem;
+                border-bottom: 2px solid $light-gray;
+                padding-bottom: 3rem;
+                a{
+                    color: $blue;
+                }
+            }
+            .boxes{
+                margin-top: 3rem;
+                article{
+                    background-color: transparent;
+                    img.team-pic{
+                        max-width: 50px;
+                        filter: grayscale(100%);
+                    }
+                }
+            }
+            .linear-access-figure{
+                max-width: 100%;
+                margin: 3rem 0;
+                img{
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+footer{
+    background-color: $gray;
+    border-top: 2px solid $light-gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    p{
+        font-size: .7rem;
+        margin: 0;
+    }
+    ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        font-size: .8rem;
+        margin: 0;
+        ul a {
+            color: $white;
+            font-size: .7rem;
+            text-decoration: none;
+        }
+    }
+}
